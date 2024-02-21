@@ -4,6 +4,14 @@ class LifeCycle extends Component {
 	state = {
 		color: null,
 	};
+	constructor(props) {
+		super(props);
+		console.log("constructor");
+	}
+	componentDidMount() {
+		console.log("componentDidMount");
+	}
+
 	static getDerivedStateFromProps(nextProps, prevState) {
 		console.log("getDerivedStateFromProps", nextProps, prevState);
 		if (nextProps.color != prevState.color) {
