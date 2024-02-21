@@ -19,6 +19,21 @@ class LifeCycle extends Component {
 		}
 		return null;
 	}
+
+	getSnapshotBeforeUpdate(prevProps, prevState) {
+		console.log("getSnapshotBeforeUpdate", prevProps, prevState);
+		if (prevProps.color != this.props.color) {
+			return prevProps.color;
+		}
+		return null;
+	}
+
+	componentDidUpdate(prevProps, prevState, snapshot) {
+		console.log("componentDidUpdate", prevProps, prevState, snapshot);
+		if (snapshot) {
+			console.log("업데이트 직전 색상", snapshot);
+		}
+	}
 	render() {
 		console.log("render");
 		return (
