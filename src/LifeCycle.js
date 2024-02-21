@@ -18,6 +18,7 @@ class LifeCycle extends Component {
 				<h1 style={{ color: this.props.color }}>
 					props : {this.props.color}
 					<br />
+					<br />
 					state : {this.state.color}
 				</h1>
 			</div>
