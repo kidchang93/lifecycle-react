@@ -34,6 +34,11 @@ class LifeCycle extends Component {
 			console.log("업데이트 직전 색상", snapshot);
 		}
 	}
+
+	shouldComponentUpdate(nextProps, nextState) {
+		console.log("shouldComponentUpdate", nextProps, nextState);
+		return nextProps.color === "green" ? true : true;
+	}
 	render() {
 		console.log("render");
 		return (

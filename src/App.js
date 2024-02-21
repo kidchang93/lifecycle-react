@@ -15,6 +15,12 @@ class App extends Component {
 					}}>
 					blue
 				</button>
+				<button
+					onClick={() => {
+						this.setState({ color: "green" });
+					}}>
+					green
+				</button>
 			</div>
 		);
 	}
